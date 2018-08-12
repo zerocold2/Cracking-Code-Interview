@@ -1,4 +1,4 @@
-
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -93,7 +93,7 @@ template <typename T> inline T readInt()
 	char p = getchar();
 	if (p == '-')
 		s = -1;
-	while ((p<'0' || p>'9') && p != EOF&&p != '-')
+	while ((p<'0' || p>'9') && p != EOF && p != '-')
 		p = getchar();
 	if (p == '-')
 		s = -1, p = getchar();
@@ -102,21 +102,7 @@ template <typename T> inline T readInt()
 		p = getchar();
 	}
 
-	return n*s;
+	return n * s;
 }
 /************************************/
 
-
-/********** Main()  function **********/
-int main()
-{
-
-#ifndef ONLINE_JUDGE
-	//freopen("input.txt", "r", stdin);
-	//freopen("output.txt","w",stdout);
-#endif
-
-	
-	return 0;
-}
-/********  Main() Ends Here *************/
