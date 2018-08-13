@@ -154,7 +154,7 @@ public:
 			FOLLOW UP
 			Write the test cases for this method
 	 */
-	static char* Remove_Dubkicate(char str[])
+	static char* Remove_Duplicate(char str[])
 	{
 
 		return str;
