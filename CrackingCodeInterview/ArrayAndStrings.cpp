@@ -1,4 +1,4 @@
-#pragma once
+﻿
 #include <iostream>
 #include <string>
 #include <vector>
@@ -105,4 +105,60 @@ template <typename T> inline T readInt()
 	return n * s;
 }
 /************************************/
+
+
+
+class ArrayAndStrings
+{
+public:
+	/*
+	* 1.1	Implement an algorithm to determine if a string has all unique characters What if you
+			can not use additional data structures?
+	*/
+
+	static bool Unique_Character(string str)
+	{
+		sort(str.begin(), str.end());
+		for (int i = 0; i < str.length(); ++i)
+		{
+			if (str[i] == str[i + 1])return false;
+		}
+		return true;
+	}
+
+	/*
+	 * 1.2	Write code to reverse a C-Style String (C-String means that “abcd” is represented as
+			fve characters, including the null character )
+	 */
+	static char* ReverseC_String(char str[])
+	{
+		int len = strlen(str);
+		if (len <= 2) return str;
+		int left = 0;
+		int right = len - 1;
+		while (left < right)
+		{
+			char tmp = str[left];
+			str[left] = str[right];
+			str[right] = tmp;
+			left++;
+			right--;
+		}
+		return str;
+	}
+
+	/*
+	 * 1.3  Design an algorithm and write code to remove the duplicate characters in a string
+			without using any additional buﬀer NOTE: One or two additional variables are fne
+			An extra copy of the array is not
+			FOLLOW UP
+			Write the test cases for this method
+	 */
+	static char* Remove_Dubkicate(char str[])
+	{
+
+		return str;
+	}
+};
+
 
