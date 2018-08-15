@@ -76,6 +76,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -112,7 +116,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArrayAndStrings.cpp" />
+    <ClCompile Include="LinkedLists.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PeakFinding.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

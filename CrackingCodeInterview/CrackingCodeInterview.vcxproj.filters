@@ -5,10 +5,25 @@
     <ClCompile Include="ArrayAndStrings.cpp">
       <Filter>Chap1_Arrays_and_strings</Filter>
     </ClCompile>
+    <ClCompile Include="PeakFinding.cpp">
+      <Filter>MIT DS and Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedLists.cpp">
+      <Filter>Chap2_Linked_Lists</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Chap1_Arrays_and_strings">
       <UniqueIdentifier>{4669568d-46ec-45bf-87ff-7b17f14d943b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MIT DS and Algorithms">
+      <UniqueIdentifier>{8860563e-3b4c-4375-9be6-3141830c02ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chap2_Linked_Lists">
+      <UniqueIdentifier>{92a2403a-7ebd-4ba1-b917-985bd978f64b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h" />
   </ItemGroup>
 </Project>
