@@ -41,6 +41,6 @@ public:
 
 	void RemoveDublicate(Node* Head) {
 		Node *curr = Head, *Nex = Head;
-		while (Head->)
+		//while (Head->)
 	}
 };
