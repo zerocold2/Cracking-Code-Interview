@@ -4,6 +4,7 @@
 #include "LinkedLists.cpp"
 
 using namespace std;
+int mat[101][101];
 int main()
 {
 
@@ -17,12 +18,24 @@ int main()
 	//cout << PeakFinding::FindPeak(arr, sizeof(arr) / sizeof(int)) << endl;
 	//ArrayAndStrings::ReplaceSpaces(str);
 	
-	LinkedLists* list = new LinkedLists(2);
+	/*LinkedLists* list = new LinkedLists(2);
 	int data;
 	while (cin >> data && data != 0) {
 		list->Add(data);
 	}
-	list->Print();
+	list->Print();*/
+	for (int i = 0;i < 4;++i) {
+		for (int j = 0;j < 4;++j)
+			cin >> mat[i][j];
+	}
+	ArrayAndStrings::RotateImageBy90(mat, 4);
+	cout << endl;
+	for (int i = 0;i < 4;++i) {
+		for (int j = 0;j < 4;++j)
+			cout<< mat[i][j]<<" ";
+		cout << endl;
+	}
+
 	system("PAUSE");
 	return 0;
 }

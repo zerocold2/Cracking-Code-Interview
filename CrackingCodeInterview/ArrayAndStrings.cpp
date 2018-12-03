@@ -111,19 +111,17 @@ public:
 	 * 1.6 Given an image represented by an NxN matrix, where each pixel in the image is 4
 		  bytes, write a method to rotate the image by 90 degrees Can you do this in place?
 	 */
-	static void RotateImageBy90(int mat[][2], int n)
+	static void RotateImageBy90(int mat[][101], int n)
 	{
-		for (int  layer = 0; layer < n/2; ++layer)
+		for (int layer = 0; layer < n / 2; ++layer)
 		{
-			int first = layer;
 			int last = n - layer - 1;
 			for (size_t i = 0; i < last; i++)
 			{
 				//save upper left corner
-				int tmp = mat[first][i];
+				int tmp = mat[layer][layer + i];
 				//bottom left to upper left
-				mat[last][1]
-				
+				mat[layer][layer + i] = mat[last - i][layer];
 			}
 		}
 	}
