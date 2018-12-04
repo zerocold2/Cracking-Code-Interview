@@ -13,6 +13,7 @@ int main()
 	//freopen("input.txt", "r", stdin);
 	//freopen("output.txt","w",stdout);
 #endif
+
 	char str[] = "Ahmed nasr ata alazbakawy";
 	int arr[10] = { 5,4,3,13,6,7,8,11,12,20 };
 
