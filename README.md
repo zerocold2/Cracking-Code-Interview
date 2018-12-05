@@ -7,9 +7,9 @@
 
 # **Current Projects:**
   1. Cracking-Code-Interview
-    Has a C++ Implementation for cracking code interview book 4th edition by gayle laakmann
+     - Has a C++ Implementation for cracking code interview book 4th edition by gayle laakmann
   2. GeneralExercises
-    Has a differnet type of problems each under a folder in order that each folder has same problem category
+     - Has a differnet type of problems each under a folder in order that each folder has same problem category
 
 # **Contribution:\**
   If any one want to contribute you have to stick to the same solution hairacy in order to keep it as mach organized as possible to be easy to serve the general purpose for the solution 
