@@ -127,6 +127,45 @@ public:
 			}
 		}
 	}
+
+	/*
+		Write an algorithm such that if an element in an MxN matrix is 0, its entire row and
+		column is set to 0
+	*/
+	static void SetZero(int mat[][101], int row, int col) {
+		int rows[101], cols[101];
+		MEM(rows, 0);
+		MEM(cols, 0);
+		REP(i, row) {
+			REP(j, col) {
+				if (mat[i][j] == 0) {
+					rows[i] = 1;
+					cols[j] = 1;
+				}
+			}
+		}
+		REP(i, row) {
+			if (rows[i] == 1)MEM(mat[i], 0);
+		}
+		REP(i, col) {
+			if (cols[i] == 1)
+				for (int j = 0;j < row;++j) {
+					mat[j][i] = 0;
+				}
+		}
+
+	}
+
+	/*
+		Assume you have a method isSubstring which checks if one word is a substring of
+		another Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using
+		only one call to isSubstring (i e , “waterbottle” is a rotation of “erbottlewat”)
+	*/
+	static bool IsSubString(string s1, string s2) {
+		s2 = s2 + s2;
+		if (s2.find(s1) != string::npos)return true;
+		return false;
+	}
 };
 
 
