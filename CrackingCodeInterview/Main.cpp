@@ -1,5 +1,4 @@
 
-#include "PeakFinding.cpp"
 #include "ArrayAndStrings.cpp"
 #include "LinkedLists.cpp"
 #include "Sort.cpp"
@@ -21,8 +20,8 @@ int main()
 	char str[] = "Ahmed nasr ata alazbakawy";
 	int arr[10] = { 50,14,3,13,6,7,8,1,12,0 };
 
-	//cout << PeakFinding::FindPeak(arr, sizeof(arr) / sizeof(int)) << endl;
-	//ArrayAndStrings::ReplaceSpaces(str);
+	
+	ArrayAndStrings::ReplaceSpaces(str);
 
 	LinkedLists* list = new LinkedLists(10);
 	int data;

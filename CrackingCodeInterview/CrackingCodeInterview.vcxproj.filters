@@ -5,9 +5,6 @@
     <ClCompile Include="ArrayAndStrings.cpp">
       <Filter>1_Arrays_and_strings</Filter>
     </ClCompile>
-    <ClCompile Include="PeakFinding.cpp">
-      <Filter>MIT DS and Algorithms</Filter>
-    </ClCompile>
     <ClCompile Include="LinkedLists.cpp">
       <Filter>2_Linked_Lists</Filter>
     </ClCompile>
