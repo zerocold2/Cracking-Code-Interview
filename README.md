@@ -10,6 +10,10 @@
      - Has a C++ Implementation for cracking code interview book 4th edition by gayle laakmann
   2. GeneralExercises
      - Has a different type of problems each under a folder in order that each folder has same problem category
+  3. MIT.6006.IntroductionToAlgorithms
+     - Implementing each problem in the course including leacture notes in .md files
+  4. MIT.6046.DesignAndAnalysisOfAlgorithms
+     - Implementing each problem in the course including leacture notes in .md files
 
 # **#Contribution:**
   If any one want to contribute you have to stick to the same solution hairarchy in order to keep it as much organized as possible to be easy to serve the general purpose for the solution 
