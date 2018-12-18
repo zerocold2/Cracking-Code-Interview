@@ -30,7 +30,7 @@ int main()
 		list->Add(data);
 	}
 	list->Print();
-	list->Sort();
+	list->RemoveDublicate();
 	cout << endl;
 	list->Print();
 

@@ -42,9 +42,19 @@ public:
 	void Sort() {
 		MergeSort(&Head);
 	}
-	void RemoveDublicate(Node* Head) {
-		Node *curr = Head, *Nex = Head;
-		//while (Head->)
+
+	void RemoveDublicate() {
+		MergeSort(&Head);
+		Node* i = Head->Next, *j = Head;
+		while (i != NULL) {
+			if (i->Data == j->Data) {
+				j->Next = i->Next;
+			}
+			else {
+				j = j->Next;
+			}
+			i = i->Next;
+		}
 	}
 private:
 	int Length(Node* linkedList) {
@@ -75,7 +85,6 @@ private:
 				slow = slow->Next;
 			}
 		}
-
 		//Now fast and the end of the list and slow is before the midpoint
 		*l = source;
 		*r = slow->Next;
