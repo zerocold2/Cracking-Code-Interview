@@ -16,6 +16,12 @@
     <Filter Include="Dynamic_Programming">
       <UniqueIdentifier>{c245287f-e22d-4c5f-b53d-27c5fb77ad54}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{3da5a16e-d339-4985-a815-e782ab23d117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Amazon">
+      <UniqueIdentifier>{e07e497d-41d5-4f3d-b097-126e5d81c9b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CP.h">
@@ -28,6 +34,21 @@
     </ClCompile>
     <ClCompile Include="MaxSum.cpp">
       <Filter>Dynamic_Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Road.cpp">
+      <Filter>Amazon</Filter>
+    </ClCompile>
+    <ClCompile Include="Prim_MST.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Kruskal_MST.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Songs.cpp">
+      <Filter>Amazon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

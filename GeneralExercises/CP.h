@@ -47,6 +47,7 @@ using namespace std;
 #define PB push_back
 #define INF (int)1e9
 #define EPS 1e-9
+#define sz(v) ((int)((v).size()))
 #define PI 3.1415926535897932384626433832795
 #define MOD 1000000007
 #define read(type) readInt<type>()
@@ -63,3 +64,46 @@ typedef long int int32;
 typedef unsigned long int uint32;
 typedef long long int int64;
 typedef unsigned long long int  uint64;
+
+struct edge
+{
+	int from, to, w;
+	edge(int from, int to, int w) :from(from), to(to), w(w) {
+	}
+	bool operator < (const edge &e)const {
+		return w > e.w;
+	}
+};
+
+struct UnionFind {
+
+	VI rank, parent;
+	int forests;
+
+	UnionFind(int n) {
+		rank = VI(n), parent = VI(n);
+		forests = n;
+		REP(i, n)parent[i] = i, rank[i] = 1;
+	}
+
+	int find_set(int x) {
+		//while(x!=parent[x]) x=parent[x];
+		if (x == parent[x])return x;
+		return parent[x] = find_set(parent[x]);
+	}
+
+	void link(int x, int y) {
+		if (rank[x] > rank[y])swap(x, y);
+		parent[x] = y;
+		if (rank[x] == rank[y])rank[y]++;
+	}
+
+	bool union_sets(int x, int y) {
+		x = find_set(x), y = find_set(y);
+		if (x != y) {
+			link(x, y);
+			forests--;
+		}
+		return x != y;
+	}
+};

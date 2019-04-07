@@ -149,8 +149,13 @@
     <ClInclude Include="CP.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="Kruskal_MST.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MaxSum.cpp" />
+    <ClCompile Include="Prim_MST.cpp" />
+    <ClCompile Include="Road.cpp" />
+    <ClCompile Include="Songs.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
