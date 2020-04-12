@@ -1,7 +1,8 @@
 //#include "MaxSum.cpp"
 //#include "Road.cpp"
 #include "CP.h"
-#include <algorithm>    // std::lexicographical_compare
+//#include <algorithm>    // std::lexicographical_compare
+#include "Graph.cpp"
 
 using namespace std;
 //23280666157866
@@ -13,7 +14,7 @@ int getMinimumCostToConstruct(int numTotalAvailableCities,
 
 	int mstCost = 0, sz = numTotalAvailableRoads, totalEdges = numTotalAvailableRoads + numNewRoadsConstruct;
 	vector<edge> edges;
-	UnionFind uf(totalEdges+1);
+	UnionFind uf(totalEdges + 1);
 	REP(i, numTotalAvailableRoads) {
 		edges.PB(edge(roadsAvailable[i][0], roadsAvailable[i][1], 0));
 		uf.union_sets(roadsAvailable[i][0], roadsAvailable[i][1]);
@@ -39,7 +40,7 @@ int getMinimumCostToConstruct(int numTotalAvailableCities,
 }
 
 string sub(string in) {
-	string ret = "";int flg = 0;
+	string ret = ""; int flg = 0;
 	for (size_t i = 0; i < in.size(); i++)
 	{
 		if (in[i] == ' ') {
@@ -70,7 +71,7 @@ vector<string> orderedJunctionBoxes(int numberOfBoxes, vector<string> boxList)
 
 	int mn = INF;
 	string ss = "";
-	for (int i = 0;i < numberOfBoxes - 1;++i) {
+	for (int i = 0; i < numberOfBoxes - 1; ++i) {
 		if (boxList[i] == "-1")continue;
 		string sn = sub(boxList[i]);
 		if (sn[0] >= 48 && sn[0] <= 57) {
@@ -121,10 +122,58 @@ int main() {
 	cout << maxsum.SolveMaxSumOnMatrix() << endl;
 */
 
-	int r[4][2] = { { 1, 2 }, { 2,3 }, { 4,5 }, { 3,5 } },
-		rr[2][3] = { { 1,6,410 },{ 2,4,800 } };
-	int *rx[4] = { r[0],r[1],r[2],r[3] }, *rrx[2] = { rr[0],rr[1]};
-	cout << getMinimumCostToConstruct(6, 4, rx, 2, rrx);
+/*
+int r[4][2] = { { 1, 2 }, { 2,3 }, { 4,5 }, { 3,5 } },
+	rr[2][3] = { { 1,6,410 },{ 2,4,800 } };
+int *rx[4] = { r[0],r[1],r[2],r[3] }, *rrx[2] = { rr[0],rr[1]};
+cout << getMinimumCostToConstruct(6, 4, rx, 2, rrx);
+*/
+	VI res;
+	const int n = 2;
+	int a[n] = { 89,100 };
+	int j;
+	for (int i = 0; i < n; ++i) {
+		for (j = i + 1; j < n; ++j) {
+			if (a[j] > a[i]) {
+				res.PB(a[j]);
+				break;
+			}
+		}
+		if (j == n)res.PB(-1);
+	}
+
+	for (int i = 0; i < res.size(); ++i) {
+		cout << res[i] << " ";
+	}
+	cout << endl;
+	
+	/*
+	
+	VVI g;
+	VI t;
+	int j;
+	
+	g = {
+		{0,1,1,0,0},
+		{0,0,1,1,1},
+		{0,0,0,1,0},
+		{0,0,0,0,1},
+		{0,0,0,0,0}
+	};
+
+
+	Graph p;
+	p.Traverse(g, p.DFS);
+
+	REP(i, p.list.size()) {
+		cout << p.list[i].first << " " << p.list[i].second << endl;
+		REP(j, 5) {
+			cout << g[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+	*/
 
 	//vector<string> ret = orderedJunctionBoxes(4, { "mi2 jog mid pet","wz3 34 54 398","a1 alps cow bar","x4 45 21 7" });
 	//vector<string> ret = orderedJunctionBoxes(6, { "t2 13 121 98","r1 box ape bit","b4 xi me nu","br8 eat nim did","w1 has uni gry","f3 52 54 31" });

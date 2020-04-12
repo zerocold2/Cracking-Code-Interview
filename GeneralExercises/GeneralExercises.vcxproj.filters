@@ -27,6 +27,9 @@
     <ClInclude Include="CP.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AmazonQ\Amazon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -49,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="Songs.cpp">
       <Filter>Amazon</Filter>
+    </ClCompile>
+    <ClCompile Include="AmazonQ\Amazon.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

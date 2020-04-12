@@ -1,29 +1,49 @@
 #include "CP.h"
-enum TraverseType {
-	DFS,
-	BFS
-};
+
 class Graph
 {
 public:
+	enum TraverseType {
+		DFS,
+		BFS
+	};
 
-	Graph();
-	~Graph();
-	void Traverse(VI &adjList,TraverseType gType) {
-		vis.clear();
+	VII list;
+	VVI mat;
+	int size;
+	Graph() {};
+	~Graph() {};
+	void Traverse(VVI& adjList, TraverseType gType) {
+		size = adjList.size();
+		MEM(visited, false);
+		mat = adjList;
+		//copy(adjList.begin(), adjList.end(), back_inserter(list)); // to copy adjList into list
+		switch (gType)
+		{
+		case DFS:
+			DFS_Traverse(0);
+			break;
+		case BFS:
+			BFS_Traverse(0, 0);
+			break;
+		default:
+			break;
+		}
 	}
 private:
-	vector< bool > vis;
-	void DFS_Traverse(VI &adjList) {
-		
+	int visited[MAX];
+	bool valid(int x) { return (x < size * size) ? true : false; }
+	void DFS_Traverse(int x) {
+		//if (!valid(x))return;
+		REP(j, size) {
+			if (!visited[x] && mat[x][j] == 1) {
+				visited[x] = true;
+				DFS_Traverse(j);
+				list.PB(MP(x, j));
+			}
+		}
+	}
+	void BFS_Traverse(int x, int y) {
 
 	}
 };
-
-Graph::Graph()
-{
-}
-
-Graph::~Graph()
-{
-}

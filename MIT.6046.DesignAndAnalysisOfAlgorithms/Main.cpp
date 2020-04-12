@@ -4,7 +4,8 @@
 int main(int argc, char* argv[])
 {
 	AdvancedDp1 Adp;
-	cout << Adp.LongestPalindromicSequance("character")<<endl;
+	char x[] = "character";
+	cout << Adp.LongestPalindromicSequance(x)<<endl;
 
 	system("PAUSE");
 	return 0;

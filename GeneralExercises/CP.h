@@ -51,6 +51,7 @@ using namespace std;
 #define PI 3.1415926535897932384626433832795
 #define MOD 1000000007
 #define read(type) readInt<type>()
+#define MAX 101
 const double pi = acos(-1.0);
 typedef pair<int, int> PII;
 typedef vector<int> VI;
