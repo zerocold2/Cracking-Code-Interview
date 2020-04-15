@@ -53,6 +53,12 @@
     <ClCompile Include="Songs.cpp">
       <Filter>Amazon</Filter>
     </ClCompile>
+    <ClCompile Include="UnionFindDisjointSets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BST.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="AmazonQ\Amazon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

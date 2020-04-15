@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AmazonQ\Amazon.cpp" />
+    <ClCompile Include="BST.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Kruskal_MST.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -158,6 +159,7 @@
     <ClCompile Include="Prim_MST.cpp" />
     <ClCompile Include="Road.cpp" />
     <ClCompile Include="Songs.cpp" />
+    <ClCompile Include="UnionFindDisjointSets.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

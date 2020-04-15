@@ -10,9 +10,12 @@ public:
 
 	VII list;
 	VVI mat;
+	VI vis;
 	int size;
+
 	Graph() {};
 	~Graph() {};
+
 	void Traverse(VVI& adjList, TraverseType gType) {
 		size = adjList.size();
 		MEM(visited, false);
@@ -28,6 +31,32 @@ public:
 			break;
 		default:
 			break;
+		}
+	}
+
+	int dfs(int n) {
+		int res=0;
+		for (int i = 0; i < mat[n].size(); ++i) {
+			if (vis[mat[n][i]] == 0) {
+				vis[mat[n][i]] = 1;
+				res = 1;
+				dfs(i);
+			}
+		}
+	}
+
+	int numOfConnectedComponent() {
+		/*
+		mat representaion as
+			1 -> 2, 3
+			2 -> 4 ,5 ,6
+			4 -> 5 , 6
+		*/
+		//fill(vis, vis, 0);
+		size = mat.size();
+		int res = 0;
+		REP(i, size) {
+			res+=dfs(i);
 		}
 	}
 private:
