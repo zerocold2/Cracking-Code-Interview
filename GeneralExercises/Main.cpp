@@ -4,9 +4,11 @@
 //#include <algorithm>    // std::lexicographical_compare
 #include "Graph.cpp"
 #include "UnionFindDisjointSets.cpp"
-//#include "AmazonQ/Amazon.h"
+#include "AmazonQ/Amazon.h"
+#include "BST.cpp"
 
 using namespace std;
+
 
 int main() {
 	/*
@@ -21,6 +23,7 @@ int main() {
 	cout << maxsum.SolveMaxSumOnMatrix() << endl;
 */
 
+
 #pragma region AmazonQ
 	//Amazon am;
 	//am.Driver_getMinimumCostToConstruct();
@@ -28,7 +31,7 @@ int main() {
 
 
 #pragma region UnionFindDisjointSets_Driver
-	
+	/*
 	UnionFindDisjointSets ufds(5);
 	ufds.UnionSet(0, 1);
 	ufds.UnionSet(1, 2);
@@ -36,32 +39,61 @@ int main() {
 	ufds.UnionSet(4, 3);
 	cout << ufds.findSet(3) << endl;
 
+	*/
 #pragma endregion
 
-	
+
 #pragma region Graph_Driver
-	VVI g;
-	VI t;
-	int j;
-	g = {{0,1,1,0,0},
-		{0,0,1,1,1},
-		{0,0,0,1,0},
-		{0,0,0,0,1},
-		{0,0,0,0,0}
-	};
-	Graph p;
-	p.Traverse(g, p.DFS);
-
-	REP(i, p.list.size()) {
-		cout << p.list[i].first << " " << p.list[i].second << endl;
-		REP(j, 5) {
-			cout << g[i][j] << " ";
-		}
-		cout << endl;
-	}
+//	VVI g;
+//	VI t;
+//	int j;
+//	g = { {0,1,1,0,0},
+//		{0,0,1,1,1},
+//		{0,0,0,1,0},
+//		{0,0,0,0,1},
+//		{0,0,0,0,0}
+//	};
+//
+//	VVI list;
+//	/*list.push_back({ 1,2,3 });
+//	list.push_back({ 0,2,3 });
+//	list.push_back({ 0,2,3 });
+//	list.push_back({ 1,2 });
+//	list.push_back({ 6 });
+//	list.push_back({ 7 });
+//*/
+//	Graph p;
+//	p.mat.resize(4);
+//	p.addEdge(0,1);
+//	p.addEdge(0,2);
+//	p.addEdge(1,2);
+//	p.addEdge(1,0);
+//	p.addEdge(2,3);
+//	p.addEdge(3,3);
+//
+//	//p.mat = list;
+//	//cout << p.numOfConnectedComponent() << endl;
+//
+//	p.Traverse(p.mat, p.BFS);
+//
+//	p.Traverse(g, p.DFS);
+//
+//	REP(i, p.list.size()) {
+//		cout << p.list[i].first << " " << p.list[i].second << endl;
+//		REP(j, 5) {
+//			cout << g[i][j] << " ";
+//		}
+//		cout << endl;
+//	}
 
 #pragma endregion
-	
+
+
+#pragma region BST
+	BinarySearchTree bst;
+	bst.driverFun();
+#pragma endregion
+
 
 	//vector<string> ret = orderedJunctionBoxes(4, { "mi2 jog mid pet","wz3 34 54 398","a1 alps cow bar","x4 45 21 7" });
 	//vector<string> ret = orderedJunctionBoxes(6, { "t2 13 121 98","r1 box ape bit","b4 xi me nu","br8 eat nim did","w1 has uni gry","f3 52 54 31" });
